@@ -81,6 +81,12 @@ patch -s -p1 < "${DIR}/patches/display/0001-meego-modedb-add-Toshiba-LTA070B220F
 
 }
 
+function beagle_LI-5M03 {
+echo "Beagleboard driver and board patches for LI-5M03"
+  patch -s -p1 < "${DIR}/patches/beagle/0001-Add-driver-for-Aptina-Micron-mt9p031-sensor.patch"
+  patch -s -p1 < "${DIR}/patches/beagle/0003-Add-support-for-mt9p031-LI-5M03-module-in-Beagleboard.patch"
+}
+
 function igepv2 {
 echo "[git] Board Patches for: igepv2"
 #pulled from: http://git.igep.es/?p=pub/scm/linux-omap-2.6.git;a=summary
@@ -187,6 +193,7 @@ cpufreq
 igepv2
 micrel
 beagle
+beagle_LI-5M03
 
 #for_next tree's
 dss2_next
