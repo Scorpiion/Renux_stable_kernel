@@ -90,10 +90,13 @@ if [ "-${LINUX_GIT}-" != "--" ]; then
   cd ${DIR}/
 
 else
-  echo "UPDATED: this script now uses a git repo vs raw *.tar.bz2"
-  echo "Update your system.sh file via: meld system.sh system.sh.sample"
-  echo "and make sure to clone a git tree and edit the location of LINUX_GIT variable"
-  exit
+  LINUX_GIT=$PWD/SRC
+  mkdir -p $LINUX_GIT
+  cd $LINUX_GIT
+  #git clone git://github.com/Scorpiion/Linux-omap.git
+  LINUX_GIT=$PWD/SRC/Linux-omap
+  cd ..
+  git_kernel
 fi
 }
 
@@ -147,6 +150,15 @@ function make_zImage {
   cd ${DIR}/
 }
 
+function make_uImage {
+  cd ${DIR}/KERNEL/
+  echo "make -j${CORES} ARCH=arm LOCALVERSION=-${BUILD} CROSS_COMPILE=\"${CCACHE} ${CC}\" CONFIG_DEBUG_SECTION_MISMATCH=y uImage"
+  time make -j${CORES} ARCH=arm LOCALVERSION=-${BUILD} CROSS_COMPILE="${CCACHE} ${CC}" CONFIG_DEBUG_SECTION_MISMATCH=y uImage
+  KERNEL_UTS=$(cat ${DIR}/KERNEL/include/generated/utsrelease.h | awk '{print $3}' | sed 's/\"//g' )
+  cp arch/arm/boot/zImage ${DIR}/deploy/${KERNEL_UTS}.uImage
+  cd ${DIR}/
+}
+
 function make_modules {
   cd ${DIR}/KERNEL/
   time make -j${CORES} ARCH=arm LOCALVERSION=-${BUILD} CROSS_COMPILE="${CCACHE} ${CC}" CONFIG_DEBUG_SECTION_MISMATCH=y modules
@@ -191,6 +203,7 @@ if [ -e ${DIR}/system.sh ]; then
   copy_defconfig
   make_menuconfig
   make_zImage
+  make_uImage
   make_modules
   make_headers
 else
