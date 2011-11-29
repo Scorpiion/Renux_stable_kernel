@@ -82,9 +82,13 @@ patch -s -p1 < "${DIR}/patches/display/0001-meego-modedb-add-Toshiba-LTA070B220F
 }
 
 function beagle_LI-5M03 {
-echo "Beagleboard driver and board patches for LI-5M03"
-  patch -s -p1 < "${DIR}/patches/beagle/0001-Add-driver-for-Aptina-Micron-mt9p031-sensor.patch"
-  patch -s -p1 < "${DIR}/patches/beagle/0003-Add-support-for-mt9p031-LI-5M03-module-in-Beagleboard.patch"
+  echo "Beagleboard driver and board patches for LI-5M03"
+  patch -s -p1 < ${DIR}/patches/beagle/LI-5M03/0001-v2-mt9p031-Aptina-Micron-MT9P031-5MP-sensor-driver.patch
+  patch -s -p1 < ${DIR}/patches/beagle/LI-5M03/0002-v8-2-2-Add-support-for-mt9p031-sensor-in-Beagleboard-XM.patch
+  patch -s -p1 < ${DIR}/patches/beagle/LI-5M03/0003-drivers-media-fix-dependencies-in-video-mt9p031.patch
+  patch -s -p1 < ${DIR}/patches/beagle/LI-5M03/0004-mt9p031-Do-not-use-PLL-if-external-frequency-is-the-same-as-target-frequency.patch
+ # (remove?)  patch -s -p1 < ${DIR}/patches/beagle/LI-5M03/0005-v4l-mt9p031-Use-i2c_smbus_-read-write-_word_swapped.patch
+  patch -s -p1 < ${DIR}/patches/beagle/LI-5M03/0006-add-revision-function.patch
 }
 
 function igepv2 {
