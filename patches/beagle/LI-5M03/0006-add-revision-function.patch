@@ -1,0 +1,18 @@
+diff --git a/arch/arm/mach-omap2/board-omap3beagle.c b/arch/arm/mach-omap2/board-omap3beagle.c
+index 82e66b6..c13129a 100644
+--- a/arch/arm/mach-omap2/board-omap3beagle.c
++++ b/arch/arm/mach-omap2/board-omap3beagle.c
+@@ -77,6 +77,11 @@ enum {
+ 
+ static u8 omap3_beagle_version;
+ 
++static u8 omap3_beagle_get_rev(void)
++{
++ return omap3_beagle_version;
++}
++
+ /*
+  * Board-specific configuration
+  * Defaults to BeagleBoard-xMC
+
+

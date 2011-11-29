@@ -1,0 +1,54 @@
+diff --git a/drivers/media/video/mt9p031.c b/drivers/media/video/mt9p031.c
+index 5cfa39f..42b5d18 100644
+--- a/drivers/media/video/mt9p031.c
++++ b/drivers/media/video/mt9p031.c
+@@ -117,6 +117,7 @@ struct mt9p031 {
+ 	u16 xskip;
+ 	u16 yskip;
+ 
++	bool use_pll;
+ 	const struct mt9p031_pll_divs *pll;
+ 
+ 	/* Registers cache */
+@@ -201,10 +202,16 @@ static int mt9p031_pll_get_divs(struct mt9p031 *mt9p031)
+ 	struct i2c_client *client = v4l2_get_subdevdata(&mt9p031->subdev);
+ 	int i;
+ 
++	if (mt9p031->pdata->ext_freq == mt9p031->pdata->target_freq) {
++		mt9p031->use_pll = false;
++		return 0;
++	}
++
+ 	for (i = 0; i < ARRAY_SIZE(mt9p031_divs); i++) {
+ 		if (mt9p031_divs[i].ext_freq == mt9p031->pdata->ext_freq &&
+ 		  mt9p031_divs[i].target_freq == mt9p031->pdata->target_freq) {
+ 			mt9p031->pll = &mt9p031_divs[i];
++			mt9p031->use_pll = true;
+ 			return 0;
+ 		}
+ 	}
+@@ -385,8 +392,10 @@ static int mt9p031_s_stream(struct v4l2_subdev *subdev, int enable)
+ 						 MT9P031_OUTPUT_CONTROL_CEN, 0);
+ 		if (ret < 0)
+ 			return ret;
+-
+-		return mt9p031_pll_disable(mt9p031);
++		if (mt9p031->use_pll)
++			return mt9p031_pll_disable(mt9p031);
++		else
++			return 0;
+ 	}
+ 
+ 	ret = mt9p031_set_params(mt9p031);
+@@ -399,7 +408,10 @@ static int mt9p031_s_stream(struct v4l2_subdev *subdev, int enable)
+ 	if (ret < 0)
+ 		return ret;
+ 
+-	return mt9p031_pll_enable(mt9p031);
++	if (mt9p031->use_pll)
++		return mt9p031_pll_enable(mt9p031);
++	else
++		return 0;
+ }
+ 
+ static int mt9p031_enum_mbus_code(struct v4l2_subdev *subdev,
