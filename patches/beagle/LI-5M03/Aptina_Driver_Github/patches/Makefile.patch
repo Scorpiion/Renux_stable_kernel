@@ -1,0 +1,10 @@
+--- Renux_linux/drivers/media/video/Makefile	2011-11-30 16:30:30.007086502 +0100
++++ Renux_linux/drivers/media/video/Makefile	2011-12-01 11:31:18.956529401 +0100
+@@ -68,6 +68,7 @@
+ obj-$(CONFIG_VIDEO_MT9T001) += mt9t001.o
+ obj-$(CONFIG_VIDEO_MT9V011) += mt9v011.o
+ obj-$(CONFIG_VIDEO_MT9V032) += mt9v032.o
++obj-$(CONFIG_VIDEO_MT9P031) += mt9p031.o
+ obj-$(CONFIG_VIDEO_SR030PC30)	+= sr030pc30.o
+ obj-$(CONFIG_VIDEO_NOON010PC30)	+= noon010pc30.o
+ obj-$(CONFIG_VIDEO_M5MOLS)	+= m5mols/

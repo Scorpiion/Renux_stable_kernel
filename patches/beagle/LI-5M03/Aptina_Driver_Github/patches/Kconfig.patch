@@ -1,0 +1,15 @@
+--- Renux_linux/drivers/media/video/Kconfig	2011-11-30 16:30:30.007086502 +0100
++++ Renux_linux/drivers/media/video/Kconfig	2011-12-01 11:29:29.026546635 +0100
+@@ -145,6 +145,12 @@
+ 	  To compile this driver as a module, choose M here: the
+ 	  module will be called tvaudio.
+ 
++config VIDEO_MT9P031
++	tristate "mt9p031 support"
++	depends on I2C && VIDEO_V4L2
++	---help---
++	  This driver supports MT9P031 cameras from Aptina.
++
+ config VIDEO_TDA7432
+ 	tristate "Philips TDA7432 audio processor"
+ 	depends on VIDEO_V4L2 && I2C

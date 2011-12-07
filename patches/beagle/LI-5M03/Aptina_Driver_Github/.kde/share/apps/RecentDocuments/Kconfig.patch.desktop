@@ -1,0 +1,6 @@
+[Desktop Entry]
+Icon=text-x-patch
+Name=Kconfig.patch
+Type=Link
+URL[$e]=file://$HOME/patches/Kconfig.patch
+X-KDE-LastOpenedWith=kate

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Icon=text-x-csrc
+Name=board-omap3beagle.c
+Type=Link
+URL[$e]=file://$HOME/MT9P031/board-omap3beagle.c
+X-KDE-LastOpenedWith=kate

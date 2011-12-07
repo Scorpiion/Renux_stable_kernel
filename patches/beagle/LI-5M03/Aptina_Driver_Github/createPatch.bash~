@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ ! -d "patches" ] ; then 
+  mkdir patches
+fi
+
+#diff -uNr Renux_linux/arch/arm/mach-omap2/board-omap3beagle.c MT9P031/board-omap3beagle.c > patches/board-omap3beagle.c.patch 
+#diff -uNr Renux_linux/arch/arm/mach-omap2/board-omap3beagle-camera.c MT9P031/board-omap3beagle-camera.c > patches/board-omap3beagle-camera.c.patch 
+#diff -uNr Renux_linux/drivers/media/video/Kconfig MT9P031/Kconfig > patches/Kconfig.patch 
+#diff -uNr Renux_linux/drivers/media/video/Makefile MT9P031/Makefile > patches/Makefile.patch 
+#diff -uNr Renux_linux/drivers/media/video/mt9p031.c MT9P031/mt9p031.c > patches/mt9p031.c.patch 
+#diff -uNr Renux_linux/include/media/mt9p031.h MT9P031/mt9p031.h > patches/mt9p031.h.patch 
+#diff -uNr Renux_linux/include/media/v4l2-chip-ident.h MT9P031/v4l2-chip-ident.h > patches/v4l2-chip-ident.h.patch 
+
+# Import files from Beagleboard-xM-validation-camwork...
+# cp /home/robert/New_Development/Aptina_with_Validation_Cam_Work/tar.gz/beagleboard-validation-linux/arch/arm/mach-omap2/omap3-opp.h .
+# cp /home/robert/New_Development/Aptina_with_Validation_Cam_Work/tar.gz/beagleboard-validation-linux/arch/arm/mach-omap2/mmc-twl4030.h .
+# cp /home/robert/New_Development/Aptina_with_Validation_Cam_Work/tar.gz/beagleboard-validation-linux/arch/arm/mach-omap2/mmc-twl4030.c .
+# cp /home/robert/New_Development/Aptina_with_Validation_Cam_Work/tar.gz/beagleboard-validation-linux/arch/arm/plat-omap/include/plat/timer-gp.h .
+# cp /home/robert/New_Development/Aptina_with_Validation_Cam_Work/tar.gz/beagleboard-validation-linux/arch/arm/mach-omap2/timer-gp.c .
+# cp /home/robert/New_Development/Aptina_with_Validation_Cam_Work/tar.gz/beagleboard-validation-linux/arch/arm/plat-omap/include/plat/display.h .
+# cp /home/robert/New_Development/Aptina_with_Validation_Cam_Work/tar.gz/beagleboard-validation-linux/drivers/video/omap2/dss/display.c .
+
+# Create patches
+diff -uNr Renux_Linux/arch/arm/mach-omap2/omap3-opp.h			MT9P031/omap3-opp.h 	> patches/omap3-opp.h.patch
+diff -uNr Renux_Linux/arch/arm/mach-omap2/mmc-twl4030.h			MT9P031/mmc-twl4030.h 	> patches/mmc-twl4030.h.patch
+diff -uNr Renux_Linux/arch/arm/mach-omap2/mmc-twl4030.c			MT9P031/mmc-twl4030.c 	> patches/mmc-twl4030.c.patch
+diff -uNr Renux_Linux/arch/arm/plat-omap/include/plat/timer-gp.h 	MT9P031/timer-gp.h 	> patches/timer-gp.h.patch
+diff -uNr Renux_Linux/arch/arm/mach-omap2/timer-gp.c 			MT9P031/timer-gp.c 	> patches/timer-gp.c.patch
+diff -uNr Renux_Linux/arch/arm/plat-omap/include/plat/display.h 	MT9P031/display.h 	> patches/display.h.patch
+diff -uNr Renux_Linux/drivers/video/omap2/dss/display.c 		MT9P031/display.c 	> patches/display.c.patch

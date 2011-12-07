@@ -1,0 +1,6 @@
+[Desktop Entry]
+Icon=text-x-patch
+Name=Makefile.patch
+Type=Link
+URL[$e]=file://$HOME/patches/Makefile.patch
+X-KDE-LastOpenedWith=kate

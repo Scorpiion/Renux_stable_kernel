@@ -1,0 +1,6 @@
+[Desktop Entry]
+Icon=application-x-shellscript
+Name=createPatch.bash
+Type=Link
+URL[$e]=file://$HOME/createPatch.bash
+X-KDE-LastOpenedWith=kate

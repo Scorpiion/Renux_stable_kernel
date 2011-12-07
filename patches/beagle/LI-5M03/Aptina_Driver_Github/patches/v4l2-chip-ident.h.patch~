@@ -1,0 +1,10 @@
+--- Renux_linux/include/media/v4l2-chip-ident.h	2011-11-30 16:30:31.256494769 +0100
++++ Renux_linux/include/media/v4l2-chip-ident.h	2011-12-01 11:28:17.577189039 +0100
+@@ -296,6 +296,7 @@
+ 	V4L2_IDENT_MT9T112		= 45022,
+ 	V4L2_IDENT_MT9V111		= 45031,
+ 	V4L2_IDENT_MT9V112		= 45032,
++	V4L2_IDENT_MT9P031		= 6145,
+ 
+ 	/* HV7131R CMOS sensor: just ident 46000 */
+ 	V4L2_IDENT_HV7131R		= 46000,
