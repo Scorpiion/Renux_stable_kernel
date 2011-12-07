@@ -1,0 +1,48 @@
+#include "libGLESv1_CL.so.txt"
+
+/*
+ * OPENGLES 1.0 COMMON FUNCTIONS
+ */
+glAlphaFunc
+glClearColor
+glClearDepthf
+glColor4f
+glDepthRangef
+glFogf
+glFogfv
+glFrustumf
+glLightModelf
+glLightModelfv
+glLightf
+glLightfv
+glLineWidth
+glLoadMatrixf
+glMaterialf
+glMaterialfv
+glMultMatrixf
+glMultiTexCoord4f
+glNormal3f
+glOrthof
+glPointSize
+glPolygonOffset
+glRotatef
+glSampleCoverage
+glScalef
+glTexEnvf
+glTexEnvfv
+glTexParameterf
+glTranslatef
+
+/*
+ * OPENGLES 1.1 COMMON FUNCTIONS
+ */
+glClipPlanef
+glGetClipPlanef
+glGetFloatv
+glGetLightfv
+glGetMaterialfv
+glGetTexEnvfv
+glGetTexParameterfv
+glPointParameterf
+glPointParameterfv
+glTexParameterfv

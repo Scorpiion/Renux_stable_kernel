@@ -1,0 +1,36 @@
+/*
+ * EGL 1.0 FUNCTIONS
+ */
+eglChooseConfig
+eglCopyBuffers
+eglCreateContext
+eglCreatePbufferSurface
+eglCreatePixmapSurface
+eglCreateWindowSurface
+eglDestroyContext
+eglDestroySurface
+eglGetConfigAttrib
+eglGetConfigs
+eglGetCurrentContext
+eglGetCurrentDisplay
+eglGetCurrentSurface
+eglGetDisplay
+eglGetError
+eglGetProcAddress
+eglInitialize
+eglMakeCurrent
+eglQueryContext
+eglQueryString
+eglQuerySurface
+eglSwapBuffers
+eglTerminate
+eglWaitGL
+eglWaitNative
+
+/*
+ * EGL 1.1 FUNCTIONS
+ */
+eglBindTexImage
+eglSwapInterval
+eglReleaseTexImage
+eglSurfaceAttrib

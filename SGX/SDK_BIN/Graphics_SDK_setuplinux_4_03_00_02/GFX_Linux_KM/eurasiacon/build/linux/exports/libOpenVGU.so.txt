@@ -1,0 +1,12 @@
+/*
+ * OpenVG utility functions
+ */
+vguArc
+vguComputeWarpQuadToQuad
+vguComputeWarpQuadToSquare
+vguComputeWarpSquareToQuad
+vguEllipse
+vguLine
+vguPolygon
+vguRect
+vguRoundRect

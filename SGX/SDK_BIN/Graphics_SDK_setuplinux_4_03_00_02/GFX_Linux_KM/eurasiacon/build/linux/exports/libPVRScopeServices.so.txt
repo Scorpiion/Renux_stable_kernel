@@ -1,0 +1,4 @@
+/*
+ * PVRSCOPESERVICES FUNCTIONS
+ */
+pvrssGetProcAddress

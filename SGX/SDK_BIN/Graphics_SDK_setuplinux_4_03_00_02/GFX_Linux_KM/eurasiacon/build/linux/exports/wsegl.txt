@@ -1,0 +1,1 @@
+WSEGL_GetFunctionTablePointer

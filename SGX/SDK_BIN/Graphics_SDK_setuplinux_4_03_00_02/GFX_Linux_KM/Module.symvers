@@ -1,0 +1,2 @@
+0x7a38ef18	PVRGetBufferClassJTable	/proj/SGX_Graphics/mahesh/sgxsdk/Graphics_SDK_4_03_00_02/GFX_Linux_KM/pvrsrvkm	EXPORT_SYMBOL
+0xa9af4695	PVRGetDisplayClassJTable	/proj/SGX_Graphics/mahesh/sgxsdk/Graphics_SDK_4_03_00_02/GFX_Linux_KM/pvrsrvkm	EXPORT_SYMBOL

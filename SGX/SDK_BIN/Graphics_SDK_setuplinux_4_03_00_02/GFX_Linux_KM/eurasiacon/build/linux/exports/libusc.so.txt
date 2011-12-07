@@ -1,0 +1,28 @@
+/*
+ * USC functions
+ */
+PVRUniFlexCreateContext
+PVRUniFlexInitInst
+
+#if defined(OUTPUT_USCHW)
+#if !defined(GPGPU)
+PVRUniFlexCompileToHw
+PVRCleanupUniflexHw
+#else
+GpgpuPVRUniFlexCompileToHw
+#endif /* #if !defined(GPGPU) */
+#endif /* #if defined(OUTPUT_USCHW) */
+
+#if defined(OUTPUT_USPBIN)
+PVRUniFlexCompileToUspBin
+PVRUniFlexDestroyUspBin
+#endif /* #if defined(OUTPUT_USPBIN) */
+
+PVRUniFlexDestroyContext
+
+#if defined(UF_TESTBENCH) || defined(DEBUG) || defined(PDUMP)
+PVRUniFlexDecodeInputInst
+PVRUniFlexDecodeIteration
+#endif /* #if defined(UF_TESTBENCH) || defined(DEBUG) || defined(PDUMP) */
+
+PVRUniFlexGetInputInstDesc

@@ -1,0 +1,13 @@
+
+Demo title: 		Fur
+
+Demonstrates: 		Fur Simulation
+
+Short Description:	Shows how to render fur effects on a simple duck model
+
+Full Description:	
+Demonstrates a method for rendering fur. Multiple translucent "shells" of the original model are rendered, each slightly larger than the previous. The texture applied to these layers contains a "dot" in the alpha channel to show where a hair passes through the "shell."
+
+VGP: 			Not Required
+Polygon Count:
+Vertex Count:

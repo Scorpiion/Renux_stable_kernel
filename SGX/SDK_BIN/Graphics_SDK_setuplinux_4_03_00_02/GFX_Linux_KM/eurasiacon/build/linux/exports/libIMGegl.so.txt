@@ -1,0 +1,53 @@
+/*
+ * IMGEGL FUNCTIONS
+ */
+IMGeglBindAPI
+IMGeglBindTexImage
+IMGeglChooseConfig
+IMGeglCopyBuffers
+IMGeglCreateContext
+IMGeglCreatePbufferFromClientBuffer
+IMGeglCreatePbufferSurface
+IMGeglCreatePixmapSurface
+IMGeglCreateWindowSurface
+IMGeglDestroyContext
+IMGeglDestroySurface
+IMGeglGetConfigAttrib
+IMGeglGetConfigs
+IMGeglGetCurrentContext
+IMGeglGetCurrentDisplay
+IMGeglGetCurrentSurface
+IMGeglGetDisplay
+IMGeglGetError
+IMGeglGetProcAddress
+IMGeglInitialize
+IMGeglMakeCurrent
+IMGeglQueryAPI
+IMGeglQueryContext
+IMGeglQueryString
+IMGeglQuerySurface
+IMGeglReleaseTexImage
+IMGeglReleaseThread
+IMGeglSurfaceAttrib
+IMGeglSwapBuffers
+IMGeglSwapInterval
+IMGeglTerminate
+IMGeglWaitClient
+IMGeglWaitGL
+IMGeglWaitNative
+
+KEGLBindImage
+KEGLCreateRenderSurface
+KEGLDestroyRenderSurface
+KEGLGetDrawableParameters
+KEGLGetImageSource
+KEGLResizeRenderSurface
+KEGLSurfaceBind
+KEGLSurfaceUnbind
+KEGLUnbindImage
+
+#if defined(DEBUG)
+KEGLAllocDeviceMemTrack
+KEGLFreeDeviceMemTrack
+#endif /* defined(DEBUG) */
+

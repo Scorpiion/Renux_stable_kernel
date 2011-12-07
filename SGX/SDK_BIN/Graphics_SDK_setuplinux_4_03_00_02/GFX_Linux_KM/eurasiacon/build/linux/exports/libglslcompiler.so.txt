@@ -1,0 +1,9 @@
+/*
+ * GLSL compiler functions
+ */
+GLSLCompileToUniflex
+GLSLFreeCompiledUniflexProgram
+GLSLInitCompiler
+GLSLDisplayMetrics
+GLSLShutDownCompiler
+SGXBS_CreateBinaryProgram

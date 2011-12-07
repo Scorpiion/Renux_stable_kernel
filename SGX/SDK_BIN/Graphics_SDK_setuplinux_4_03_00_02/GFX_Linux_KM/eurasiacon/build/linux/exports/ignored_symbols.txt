@@ -1,0 +1,4 @@
+^_init
+^_fini
+^__data_start
+^__aeabi_f2ulz

@@ -1,0 +1,215 @@
+/*
+ * SERVICES_UM FUNCTIONS
+ */
+PVRSRVAcquireDeviceData
+PVRSRVAllocDeviceMem
+PVRSRVAllocUserModeMem
+PVRSRVCallocUserModeMem
+PVRSRVClientEvent
+PVRSRVClockus
+PVRSRVCloseBCDevice
+PVRSRVCloseDCDevice
+PVRSRVConnect
+PVRSRVCreateAppHintState
+PVRSRVCreateDCSwapChain
+PVRSRVCreateDeviceMemContext
+PVRSRVCreateMutex
+PVRSRVDestroyDCSwapChain
+PVRSRVDestroyDeviceMemContext
+PVRSRVDestroyMutex
+PVRSRVDisconnect
+PVRSRVEnumDCDims
+PVRSRVEnumDCFormats
+PVRSRVEnumerateDeviceClass
+PVRSRVEnumerateDevices
+PVRSRVEventObjectWait
+PVRSRVFreeAppHintState
+PVRSRVFreeDeviceMem
+PVRSRVFreeUserModeMem
+PVRSRVGetAppHint
+PVRSRVGetBCBuffer
+PVRSRVGetBCBufferInfo
+PVRSRVGetDCBuffers
+PVRSRVGetDCInfo
+PVRSRVGetDCSystemBuffer
+PVRSRVGetLibFuncAddr
+PVRSRVGetMiscInfo
+PVRSRVInitSrvConnect
+PVRSRVInitSrvDisconnect
+PVRSRVLoadLibrary
+PVRSRVLockMutex
+PVRSRVMapDeviceClassMemory
+PVRSRVMapPhysToUserSpace
+PVRSRVMemCopy
+PVRSRVMemSet
+PVRSRVCreateSyncInfoModObj
+PVRSRVDestroySyncInfoModObj
+PVRSRVModifyCompleteSyncOps
+PVRSRVModifyPendingSyncOps
+PVRSRVSyncOpsFlushToModObj
+PVRSRVSyncOpsFlushToDelta
+PVRSRVAllocSyncInfo
+PVRSRVFreeSyncInfo
+PVRSRVOpenBCDevice
+PVRSRVOpenDCDevice
+PVRSRVReallocUserModeMem
+PVRSRVReleaseMiscInfo
+PVRSRVReleaseThreadQuanta
+PVRSRVSetDCDstColourKey
+PVRSRVSetDCDstRect
+PVRSRVSetDCSrcColourKey
+PVRSRVSetDCSrcRect
+PVRSRVSwapToDCBuffer
+PVRSRVSwapToDCSystem
+PVRSRVUnloadLibrary
+PVRSRVUnlockMutex
+PVRSRVUnmapDeviceClassMemory
+PVRSRVUnmapPhysToUserSpace
+PVRSRVUnwrapExtMemory
+PVRSRVWaitus
+PVRSRVWrapExtMemory
+PVRSRVPollForValue
+PVRSRVGetErrorString
+PVRSRVGetCurrentProcessID
+PVRSRVMapDeviceMemory
+PVRSRVUnmapDeviceMemory
+PVRSRVExportDeviceMem
+PVRSRVSetLocale
+
+#if defined(PDUMP)
+
+PVRSRVPDumpBitmap
+PVRSRVPDumpComment
+PVRSRVPDumpCommentf
+PVRSRVPDumpCommentWithFlagsf
+PVRSRVPDumpCycleCountRegRead
+PVRSRVPDumpDriverInfo
+PVRSRVPDumpInit
+PVRSRVPDumpIsCapturing
+PVRSRVPDumpIsCapturingTest
+PVRSRVPDumpMem
+PVRSRVPDumpMemPol
+PVRSRVPDumpPDDevPAddr
+PVRSRVPDumpReg
+PVRSRVPDumpRegPol
+PVRSRVPDumpRegPolWithFlags
+PVRSRVPDumpRegRead
+PVRSRVPDumpSetFrame
+PVRSRVPDumpStartInitPhase
+PVRSRVPDumpStopInitPhase
+PVRSRVPDumpSync
+PVRSRVPDumpSyncPol
+
+#if !defined(SUPPORT_VGX)
+PVRSRVPDumpBufferArray
+#endif
+
+#endif /* PDUMP */
+
+#if defined(DEBUG)
+PVRSRVAllocUserModeMemTracking
+PVRSRVCallocUserModeMemTracking 
+PVRSRVReallocUserModeMemTracking
+PVRSRVFreeUserModeMemTracking
+#endif
+
+#if defined(DEBUG) || defined(TIMING)
+PVRSRVInitProfileOutput
+PVRSRVDeInitProfileOutput
+PVRSRVMetricsGetCPUFreq
+PVRSRVMetricsTimeNow
+PVRSRVProfileOutput
+PVRSRVGetTimerRegister
+PVRSRVReleaseTimerRegister
+#endif
+
+#if defined(SUPPORT_SGX)
+
+SGX2DQueryBlitsComplete
+SGXAddRenderTarget
+SGXCreateRenderContext
+SGXCreateTransferContext
+SGXDestroyRenderContext
+SGXDestroyTransferContext
+SGXDevInitPart2
+SGXGetClientInfo
+SGXGetInfoForSrvInit
+SGXGetMiscInfo
+SGXKickTA
+SGXQueueTransfer
+SGXReleaseClientInfo
+SGXRemoveRenderTarget
+SGXScheduleProcessQueues
+SGXSetContextPriority
+
+SGXReadHWPerfCB
+
+#endif /* SUPPORT_SGX */
+
+#if defined(SUPPORT_VGX)
+
+VGXActivateFrameContext
+VGXCreateRenderContext
+VGXDestroyRenderContext
+VGXDevInitPart2
+VGXDMAUnitDelete
+#if defined(PDUMP) && defined(VGX_PDUMP_FROM_FIRMWARE)
+VGXDMAUnitDequeueItem
+#endif
+VGXDMAUnitDiscardScene
+VGXDMAUnitEndOfPath
+VGXDMAUnitEndOfScene
+VGXDMAUnitFlush
+VGXDMAUnitNew
+VGXDMAUnitQueueItem
+VGXDMAUnitQueueRawItem
+VGXGetClientInfo
+VGXGetInfoForSrvInit
+VGXGetMiscInfo
+VGXReleaseClientInfo
+VGXCreateRenderTarget
+VGXDestroyRenderTarget
+VGXScheduleProcessQueues
+
+#endif /* SUPPORT_VGX */
+
+#if defined(SUPPORT_DRI_DRM_NO_LIBDRM)
+drmClose
+drmCommandNone
+drmCommandWrite
+drmDropMaster
+drmIoctl
+drmModeAddFB
+drmModeSetCrtc
+drmOpen
+#endif
+
+/* Policy copied from pvr_debug.h
+ *
+ * Horrible to have this here but we can't use the header
+ * because it has some non-preprocessor stuff in it.
+ */
+
+#if !defined(PVRSRV_NEED_PVR_ASSERT) && defined(DEBUG)
+#define PVRSRV_NEED_PVR_ASSERT
+#endif
+
+#if defined(PVRSRV_NEED_PVR_ASSERT) && !defined(PVRSRV_NEED_PVR_DPF)
+#define PVRSRV_NEED_PVR_DPF
+#endif
+
+#if !defined(PVRSRV_NEED_PVR_TRACE) && (defined(DEBUG) || defined(TIMING))
+#define PVRSRV_NEED_PVR_TRACE
+#endif
+
+#if defined(PVRSRV_NEED_PVR_ASSERT)
+PVRSRVDebugAssertFail 
+#endif
+
+#if defined(PVRSRV_NEED_PVR_DPF)
+PVRSRVDebugPrintf 
+#endif
+
+#if defined(PVRSRV_NEED_PVR_TRACE)
+PVRSRVTrace
+#endif
