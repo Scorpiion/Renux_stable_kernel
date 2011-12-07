@@ -1,8 +1,0 @@
-[KFileDialog Settings]
-Height 1080=523
-Recent Files[$e]=board-omap3beagle-camera.c,$HOME/createPatch.bash,$HOME/applyPatches.bash,/home/robert/New_Development/Renux_stable_kernel/patches/beagle/LI-5M03/0006-add-revision-function.patch,$HOME/patches/Kconfig.patch,$HOME/patches/Makefile.patch,$HOME/patches/v4l2-chip-ident.h.patch,$HOME/patches/board-omap3beagle.c.patch,$HOME/patches/board-omap3beagle-camera.c.patch,$HOME/MT9P031/board-omap3beagle.c,$HOME/MT9P031/board-omap3beagle-camera.c
-Width 1920=960
-
-[MainWindow]
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAPLAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAAAAADGgAAAAAAAAAA
-ToolBarsMovable=Disabled

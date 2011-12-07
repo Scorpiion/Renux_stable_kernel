@@ -1,6 +1,0 @@
-[Desktop Entry]
-Icon=application-x-shellscript
-Name=applyPatches.bash
-Type=Link
-URL[$e]=file://$HOME/applyPatches.bash
-X-KDE-LastOpenedWith=kate
